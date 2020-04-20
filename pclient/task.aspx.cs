@@ -12,11 +12,12 @@ namespace pclient
         string a,b;
         protected void Page_Load(object sender, EventArgs e)
         {
+            Label4.Text = " ";
             ServiceReference1.ServiceClient client = new ServiceReference1.ServiceClient();
             a = Request.QueryString["id"];
             b = Session["id"].ToString();
             string uid = client.getuser(b);
-           
+            Label3.Text = "Welcome" + Session["id"];
             if (client.taskuploaded(uid, a))
             {
                 Session["tid"] = a;
@@ -38,7 +39,7 @@ namespace pclient
             }
             int uid = Int32.Parse(client.getuser(b));
             client.projectdetail(FileUpload1.FileName, TextBox1.Text, Label2.Text, "PENDING", uid, a);
-            
+            Label4.Text = "Your Task Has Been Uploaded Succesfully!!";
         }
     }
 }

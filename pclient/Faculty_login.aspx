@@ -30,26 +30,26 @@
   </div>
 </nav>
     <form id="form1" runat="server">
-        <div>
-                <table class="auto-style1">
+       <div class="form-group">
+                <table class="table">
             <tr>
                 <td>Faculty name</td>
                 <td>
-                    <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="TextBox1" class="form-control" runat="server"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td>Password</td>
                 <td>
-                    <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="TextBox2" class="form-control" TextMode="Password" runat="server"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Login" />
+                    <asp:Button ID="Button1" class="btn btn-primary" runat="server" OnClick="Button1_Click" Text="Login" />
                 </td>
                 <td>
-                    <asp:Label ID="Label1" runat="server" Text="demo"></asp:Label>
+                    <asp:Label ID="Label1" runat="server" Text="demo" ForeColor="Red"></asp:Label>
                 </td>
             </tr>
         </table>

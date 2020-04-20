@@ -27,14 +27,14 @@
   </div>
 </nav>
 
-    <form id="form1" runat="server">
+    <form id="form1" runat="server" class="form-group">
         <div>
             
-            <table class="auto-style1">
+            <table class="table">
                 <tr>
                     <td>Task Name</td>
                     <td>
-                        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                        <asp:Label ID="Label1" class="form-control" runat="server" Text="Label"></asp:Label>
                     </td>
                 </tr>
                 <tr>
@@ -46,24 +46,26 @@
                 <tr>
                     <td>Breif Description</td>
                     <td>
-                        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="TextBox1" class="form-conrol" TextMode="MultiLine" runat="server"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
                     <td>Submit Date</td>
                     <td>
-                        <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
+                        <asp:Label ID="Label2" runat="server" class="form-control" Text="Label"></asp:Label>
                     </td>
                 </tr>
                 <tr>
                     <td>Approved ?</td>
-                    <td>No</td>
+                    <td>Pending</td>
                 </tr>
                 <tr>
                     <td>
-                        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Submit" />
+                        <asp:Button ID="Button1" runat="server" class="btn btn-primary" OnClick="Button1_Click" Text="Submit" />
                     </td>
-                    <td>&nbsp;</td>
+                    <td>
+                        <asp:Label ID="Label4" runat="server" Text="Label"></asp:Label>
+                    </td>
                 </tr>
             </table>
         </div>

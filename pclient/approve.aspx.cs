@@ -12,29 +12,40 @@ namespace pclient
 {
     public partial class approve : System.Web.UI.Page
     {
+        public List<List<string>> myList;
+        public DataSet ds;
+        public DataTable dt;
         protected void Page_Load(object sender, EventArgs e)
         {
-            DataSet ds = new DataSet();
-            DataTable dt = new DataTable();
+             ds = new DataSet();
+             dt = new DataTable();
             ServiceReference1.ServiceClient ser = new ServiceReference1.ServiceClient();
             ds = ser.getproject();
             dt = ds.Tables["projectdata"];
-            Response.Write("\n" + "NO." + "File NAME" + "Task"+"\n");
+          
+         //   Response.Write("<table border=1><tr><td>No</td><td>File Name</td><td>Task</td></tr>");
 
-         
-                foreach (DataRow dr in dt.Rows)
+
+            myList = new List<List<string>>();
+            foreach (DataRow dr in dt.Rows)
                 {
-                //        Response.Write("<img src='" + "~/images/3.jpg" + "'/>");
-                if ((dr["uid"]).ToString() == Request.QueryString["id"] && dr["fid"].ToString() == "1")
+                     //   Response.Write("<tr>");
+                
+                if ((dr["uid"]).ToString() == Request.QueryString["id"] && (dr["approve"].ToString() == "PENDING" || dr["approve"].ToString() == "NO"))
                 {
                     string x = ser.gettask(dr["tid"].ToString());
-                    Response.Write("\n" + "<hr/>"   + "<a href='" + "detailapprove.aspx?id=" + dr["id"] + "'>" + "  " + dr["tid"].ToString() + "</a>"+ "  " + dr["filename"].ToString() + "  " + x +  "\t");
-                 //   Response.Write("<input type=text value='hello'>");
-                 //   Response.Write("<input type=\"button\" value=\"OK\" onclick=\"javascript:window.location.href='order.aspx?oid=" + dr["oid"] + "'\" />");
+
+                    //Response.Write("\n" + "<hr/>"   +  dr["tid"].ToString() +  "  " + dr["filename"].ToString() + "  " +"<a href='" + "detailapprove.aspx?id=" + dr["id"] + "'>" +  x +"</a>" + "\t");
+               //     Response.Write("<td>"+ dr["tid"].ToString() + "</td>");
+               //     Response.Write("<td>" + dr["filename"].ToString() + "</td>");
+               //     Response.Write("<td>" + "<a href='" + "detailapprove.aspx?id=" + dr["id"] + "'>" + x + "</a>" + "</td>");
+                    //   Response.Write("<input type=\"button\" value=\"OK\" onclick=\"javascript:window.location.href='order.aspx?oid=" + dr["oid"] + "'\" />");
+                    myList.Add(new List<string> { dr["tid"].ToString(), dr["filename"].ToString(),x+" "+dr["id"] });
 
                 }
+               // Response.Write("</tr>");
             }
-       
+            //Response.Write("</table>");
 
         }
 

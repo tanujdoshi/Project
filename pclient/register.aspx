@@ -31,15 +31,15 @@
     </ul>
   </div>
 </nav>
-    <form id="form1" runat="server">
-        <div>
-            <table class="auto-style1">
+    <form id="form1" runat="server" align="center">
+        <div class="form-group">
+            <table class="table1">
                 <tr>
                     <td>
-                        <asp:Label ID="Label1" runat="server" Text="Student 1 Id "></asp:Label>
+                        <asp:Label ID="Label1"  runat="server" Text="Student 1 Id "></asp:Label>
                     </td>
                     <td>
-                        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="TextBox1" class="form-control" runat="server"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
@@ -47,7 +47,7 @@
                         <asp:Label ID="Label2" runat="server" Text="Student 2 Id"></asp:Label>
                     </td>
                     <td>
-                        <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="TextBox2" class="form-control"  runat="server"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
@@ -55,19 +55,19 @@
                         <asp:Label ID="Label3" runat="server" Text="Student 3 Id"></asp:Label>
                     </td>
                     <td>
-                        <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="TextBox3" class="form-control" runat="server"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
                     <td>Project Title</td>
                     <td>
-                        <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="TextBox4" class="form-control" runat="server"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
                     <td>Password</td>
                     <td>
-                        <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="TextBox5" Textmode="password" class="form-control" runat="server"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
@@ -77,7 +77,7 @@
                 </tr>
             </table>
             <br />
-            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Register" />
+            <asp:Button ID="Button1" class="btn btn-primary" runat="server" OnClick="Button1_Click" Text="Register" />
 
         </div>
     </form>

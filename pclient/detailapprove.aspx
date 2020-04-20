@@ -17,7 +17,7 @@
     <ul class="navbar-nav mr-auto">
         
       <li class="nav-item">
-        <a class="nav-link" href="project_list.aspx.aspx">Home</a></li>  
+        <a class="nav-link" href="project_list.aspx">Home</a></li>  
       <li class="nav-item">
         <a class="nav-link" href="alltask.aspx">All Tasks</a>
        </li>
@@ -28,32 +28,35 @@
   </div>
 </nav>
 
-    <form id="form1" runat="server">
-        <div>
+    <form id="form1" runat="server" align="center">
+        <div class="form-group">
             
-            <table class="auto-style1">
+            <table class="table">
+                <tr>
+                    <td colspan="2"><h3>Approve Task</h3></td>
+                 </tr>
                 <tr>
                     <td>Project Name</td>
                     <td>
-                        <asp:Label ID="Label8" runat="server" Text="Label"></asp:Label>
+                        <asp:Label ID="Label8" class="form-control" runat="server" Text="Label"></asp:Label>
                     </td>
                 </tr>
                 <tr>
                     <td>Task Name</td>
                     <td>
-                        <asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>
+                        <asp:Label ID="Label3" class="form-control" runat="server" Text="Label"></asp:Label>
                     </td>
                 </tr>
                 <tr>
                     <td>File</td>
                     <td>
-                        <asp:Label ID="Label4" runat="server" Text="Label"></asp:Label>
+                        <asp:Label ID="Label4" class="form-control" runat="server" Text="Label"></asp:Label>
                     </td>
                 </tr>
                 <tr>
                     <td>Breif Description</td>
                     <td>
-                        <asp:Label ID="Label5" runat="server" Text="Label"></asp:Label>
+                        <asp:Label ID="Label5" runat="server" class="form-control" TextMode="MultiLine" Text="Label"></asp:Label>
                     </td>
                 </tr>
                 <tr>
@@ -91,10 +94,9 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>
-                        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Submit" />
+                    <td colspan="2">
+                        <asp:Button ID="Button1" runat="server" class="btn btn-primary" OnClick="Button1_Click" Text="Submit" />
                     </td>
-                    <td>&nbsp;</td>
                 </tr>
             </table>
         </div>

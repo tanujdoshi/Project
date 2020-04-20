@@ -29,24 +29,24 @@
     </ul>
   </div>
 </nav>
-    <form id="form1" runat="server">
-        <div>
-             <table class="auto-style1">
+    <form id="form1" runat="server" align="center">
+        <div class="form-group">
+             <table class="table">
             <tr>
                 <td>Student Id</td>
                 <td>
-                    <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="TextBox1" class="form-control" runat="server"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td>Password</td>
                 <td>
-                    <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="TextBox2" class="form-control" Textmode="password" runat="server"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Login" />
+                    <asp:Button ID="Button1" class="btn btn-primary" runat="server" OnClick="Button1_Click" Text="Login" />
                 </td>
                 <td>
                     <asp:Label ID="Label1" runat="server" Text="demo"></asp:Label>

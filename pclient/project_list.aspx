@@ -17,7 +17,7 @@
     <ul class="navbar-nav mr-auto">
         
       <li class="nav-item">
-        <a class="nav-link" href="project_list.aspx.aspx">Home</a></li>
+        <a class="nav-link" href="project_list.aspx">Home</a></li>
         </li>
       <li class="nav-item">
         <a class="nav-link" href="alltask.aspx">All Tasks</a>
@@ -29,7 +29,7 @@
   </div>
 </nav>
 
-    <form id="form1" runat="server">
+    <form id="form1" runat="server" class="form-group">
         <div>
             <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="projectname" DataValueField="Id">
             </asp:DropDownList>

@@ -30,84 +30,75 @@
 
     <form id="form1" runat="server">
         <div>
-            <asp:Label ID="Label11" runat="server" Font-Italic="True" Text="You have already uploaded Your Task"></asp:Label>
+            <asp:Label ID="Label11" runat="server" Font-Italic="True" Text="You have already uploaded Your Task" ForeColor="#FF3300"></asp:Label>
             <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Panel ID="Panel1" runat="server" BackColor="#FFFF99" Height="213px" Width="274px">
-                <table class="auto-style1">
-                    <tr>
-                        <td>Project Name</td>
-                        <td>
+            <br />
+            <table class="table">
+                <tr>
+                    <td>Project Name</td>
+                    <td>
                             <asp:Label ID="Label8" runat="server" Text="Label"></asp:Label>
                         </td>
-                    </tr>
-                    <tr>
-                        <td>Task Name</td>
-                        <td>
+                </tr>
+                <tr>
+                    <td>Task Name</td>
+                    <td>
                             <asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>
                         </td>
-                    </tr>
-                    <tr>
-                        <td>File</td>
-                        <td>
+                </tr>
+                <tr>
+                    <td>File</td>
+                    <td>
                             <asp:Label ID="Label4" runat="server" Text="Label"></asp:Label>
                         </td>
-                    </tr>
-                    <tr>
-                        <td>Breif Description</td>
-                        <td>
+                </tr>
+                <tr>
+                    <td>Breif Description</td>
+                    <td>
                             <asp:Label ID="Label5" runat="server" Text="Label"></asp:Label>
                         </td>
-                    </tr>
-                    <tr>
-                        <td>Submit Date</td>
-                        <td>
+                </tr>
+                <tr>
+                    <td>submit date</td>
+                    <td>
                             <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
                         </td>
-                    </tr>
-                    <tr>
-                        <td>Approved ?</td>
-                        <td>
+                </tr>
+                <tr>
+                    <td>Approved?</td>
+                    <td>
                             <asp:Label ID="Label10" runat="server" Text="Label"></asp:Label>
                         </td>
-                    </tr>
-                    <tr>
-                        <td>Approve date</td>
-                        <td>
+                </tr>
+                <tr>
+                    <td>Approve Date</td>
+                    <td>
                             <asp:Label ID="Label6" runat="server" Text="Label"></asp:Label>
                         </td>
-                    </tr>
-                    <tr>
-                        <td>Student Leader Id</td>
-                        <td>
+                </tr>
+                <tr>
+                    <td>Student Leader Id</td>
+                    <td>
                             <asp:Label ID="Label7" runat="server" Text="Label"></asp:Label>
                         </td>
-                    </tr>
-                    <tr>
-                        <td>Faculty Name:</td>
-                        <td>
+                </tr>
+                <tr>
+                    <td>Faculty Name</td>
+                    <td>
                             <asp:Label ID="Label9" runat="server" Text="Label"></asp:Label>
                         </td>
-                    </tr>
-                </table>
-            </asp:Panel>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="Label12" runat="server" ForeColor="#66FF33" Text="Update Your Task Here"></asp:Label>
-            <asp:Label ID="Label15" runat="server" Text="Label"></asp:Label>
-            <br />
-            <table class="auto-style1">
+                </tr>
                 <tr>
-                    <td>
-                        <asp:Label ID="Label13" runat="server" Text="File"></asp:Label>
-                    </td>
+                    <td><h3>Update Your Task!!</h3></td>
+                </tr>
+                <tr>
+                    <td>File</td>
                     <td>
                         <asp:FileUpload ID="FileUpload1" runat="server" />
                     </td>
                 </tr>
                 <tr>
-                    <td>
-                        <asp:Label ID="Label14" runat="server" Text="Breif Descriotion"></asp:Label>
-                    </td>
+                    <td>Breif Description</td>
                     <td>
                         <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
                     </td>
@@ -116,6 +107,29 @@
                     <td>
                         <asp:Button ID="Button1" runat="server" OnClick="Button1_Click1" Text="Update" />
                     </td>
+                    <td>
+            <asp:Label ID="Label15" runat="server" Text="Label" ForeColor="#00CC00"></asp:Label>
+                        <br />
+                    </td>
+                </tr>
+            </table>
+            <br />
+            <table class="auto-style1">
+                <tr>
+                    <td>
+                        &nbsp;</td>
+                    <td>
+                        </td>
+                </tr>
+                <tr>
+                    <td>
+                        &nbsp;</td>
+                    <td>
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td>
+                        &nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
             </table>

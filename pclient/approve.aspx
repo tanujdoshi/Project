@@ -17,7 +17,7 @@
     <ul class="navbar-nav mr-auto">
         
       <li class="nav-item">
-        <a class="nav-link" href="project_list.aspx.aspx">Home</a></li>  
+        <a class="nav-link" href="project_list.aspx">Home</a></li>  
       <li class="nav-item">
         <a class="nav-link" href="alltask.aspx">All Tasks</a>
        </li>
@@ -29,15 +29,49 @@
 </nav>
 
     <form id="form1" runat="server">
-        <div>
-            <asp:PlaceHolder ID="PlaceHolder1" runat="server"></asp:PlaceHolder>
-            <br />
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
-            <br />
-            <br />
-            <asp:GridView ID="GridView1" runat="server">
-            </asp:GridView>
-        </div>
+      
     </form>
+
+    <table class="table">
+        <thead>
+           <tr>
+            <th scope="col">#</th>
+            <th scope="col">File name</th>
+            <th scope="col">Task</th>
+            </tr>
+        </thead>
+        <tbody>
+            <%try
+                {
+                    foreach (List<string> subList in myList)
+                    {
+                        int i = 0;
+                        %><tr><%
+                                  foreach (string item in subList)
+                                  {
+                                      if(i==2)
+                                      {
+                                          string[] w = item.Split(' ');string d = w[w.Length - 1];
+                                          string n=item.Substring(0, item.LastIndexOf(" ")<0?0:item.LastIndexOf(" "));
+                                          %>
+                                          <td><a href="detailapprove.aspx?id=<%=d %>"><%=n %></a></td>
+                                           <%
+                                                   }
+                                                   else
+                                                   {
+                                                       %><td><%=item %></td><%
+                                                                                   }
+
+                                                                             i++;
+                                                                               }
+                                                                               
+                        %></tr><%
+                                  }
+
+
+            %><%}
+    catch (Exception) { }%>
+        </tbody>
+    </table>
 </body>
 </html>

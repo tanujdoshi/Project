@@ -26,9 +26,9 @@ namespace pclient
          
             foreach (DataRow dr in dt.Rows)
             {
-                Label3.Text = ser.gettask(dr["tid"].ToString());
+                Label3.Text = ser.gettask(dr["tid"].ToString()); 
                 tid = dr["tid"].ToString();
-                Label4.Text = " <a href=\"download.aspx?name="+dr["filename"]+"\"> download </a> ";
+                Label4.Text = " <a href=download.aspx?name="+dr["filename"]+">"+ dr["filename"]+"</a> ";
                 //"< a href = '" + "download.aspx?name=" + dr["filename"] + "' > " + "  " + dr["filename"].ToString() + " </ a > ";
                 Label5.Text = dr["description"].ToString();
                 Label2.Text = dr["subdate"].ToString();
@@ -40,6 +40,7 @@ namespace pclient
                 uid = dr["uid"].ToString();
                 
                 Label6.Text = DateTime.Today.ToString("dd/MM/yyyy");
+                
                 Label9.Text = Session["fid"].ToString();
             }
 
@@ -49,8 +50,7 @@ namespace pclient
         {
             fid = ser.getfaculty(Session["fid"].ToString());
             ser.updateprojectdata(DropDownList1.SelectedItem.Value, uid, fid, tid);
-            Response.Redirect("project_lis.aspx");
-            Response.Redirect("project_lis.aspx");
+            Response.Redirect("project_list.aspx");
         }
     }
 }

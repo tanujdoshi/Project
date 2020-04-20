@@ -8,7 +8,7 @@ using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
 
-// NOTE: You can use the "Rename" command on the "Refactor" menu getfnameto change the class name "Service" in code, svc and config file together.
+// NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service" in code, svc and config file together.
 public class Service : IService
 {
     public void register(string s1, string s2, string s3, string pname, string password)
@@ -50,15 +50,10 @@ public class Service : IService
             SqlDataReader reader = cmd.ExecuteReader();
             if (reader.HasRows)
             {
-
-                con.Close();
                 return true;
-
-
             }
             else
             {
-                con.Close();
                 return false;
             }
 
@@ -83,12 +78,10 @@ public class Service : IService
             SqlDataReader reader = cmd.ExecuteReader();
             if (reader.HasRows)
             {
-                con.Close();
                 return true;
             }
             else
             {
-                con.Close();
                 return false;
             }
 
@@ -189,7 +182,6 @@ public class Service : IService
         return x;
     }
 
-  
     public DataTable getprojectdata(int a)
     {
         SqlConnection con = new SqlConnection("Data Source=(LocalDb)\\MSSQLLocalDB;Initial Catalog=myproject;Integrated Security=True;Pooling=False");
@@ -200,7 +192,6 @@ public class Service : IService
         SqlDataAdapter sda = new SqlDataAdapter(cmd);
         DataTable dt = new DataTable();
         sda.Fill(dt);
-        con.Close();
         return dt;
 
     }
@@ -215,7 +206,6 @@ public class Service : IService
             string Query = "SELECT * FROM projectdata";
             SqlDataAdapter sda = new SqlDataAdapter(Query, con);
             sda.Fill(ds, "projectdata");
-            con.Close();
         }
         catch (FaultException fex)
         {
@@ -233,7 +223,6 @@ public class Service : IService
             string Query = "SELECT * FROM projectdata where id=" + a;
             SqlDataAdapter sda = new SqlDataAdapter(Query, con);
             sda.Fill(ds, "projectdata");
-            con.Close();
         }
         catch (FaultException fex)
         {
@@ -272,12 +261,10 @@ public class Service : IService
             SqlDataReader reader = cmd.ExecuteReader();
             if (reader.HasRows)
             {
-                con.Close();
                 return true;
             }
             else
             {
-                con.Close();
                 return false;
             }
 
@@ -296,7 +283,6 @@ public class Service : IService
             string Query = "SELECT * FROM projectdata where uid=" + uid + "AND tid="+tid;
             SqlDataAdapter sda = new SqlDataAdapter(Query, con);
             sda.Fill(ds, "projectdata");
-            con.Close();
         }
         catch (FaultException fex)
         {

@@ -22,18 +22,21 @@ namespace pclient
                 {
                     FileUpload1.PostedFile.SaveAs(Server.MapPath("~/upload/") + FileUpload1.FileName);
                 }
-
-                client.updatepuser(uid, tid, fname, Label5.Text);
+                //Label16.Text = uid + " " + tid + " " + FileUpload1.FileName + " " + TextBox1.Text;
+                client.updatepuser(uid, tid, FileUpload1.FileName, TextBox1.Text);
+                Label15.Text = "Task Uploaded Successfully!!";
             }
             else
             {
-                Label15.Text = "You Can't update once it is approved!!";
+                Label11.Text = "You Can't update once it is approved!!";
             }
         }
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            Label15.Text = "";
+            Label11.Text = "";
+            Label15.Text = " ";
+            Label1.Text = Session["id"].ToString();
             tid = Session["tid"].ToString();
             string u = Session["id"].ToString();
             uid = ser.getuser(u);
@@ -61,8 +64,8 @@ namespace pclient
                    Label7.Text = commands[0];
                    uid = dr["uid"].ToString();
 
-                   Label6.Text = DateTime.Today.ToString("dd/MM/yyyy");
-                   Label9.Text = dr["fid"].ToString();
+                   Label6.Text = dr["apprdate"].ToString();
+                Label9.Text = dr["fid"].ToString();
                 Label10.Text = dr["approve"].ToString();
                 app= dr["approve"].ToString();
             }

@@ -27,7 +27,7 @@
     </ul>
   </div>
 </nav>
-        <div>
+        <div class="form-group">
             <br />
             <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="name" DataValueField="Id">
             </asp:DropDownList>
